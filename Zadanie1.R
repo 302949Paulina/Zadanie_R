@@ -1,11 +1,18 @@
 library("terra")
 
-sciezka_do_logo = system.file("ex/logo.tif", package = "terra")
+sciezka_do_logo <- ("~/Zadanie_R/dane/Lublin_DEM.tif")
 sciezka_do_logo # wyświetl
 
 logo = rast(sciezka_do_logo)
 
-logo
+plot(logo)
+
+
+#Opcja druga
+sciezka_do_logo <- system.file("ex/logo.tif", package = "terra")
+sciezka_do_logo
+logo <- rast(sciezka_do_logo)
+plot(logo)
 # class       : SpatRaster
 # dimensions  : 77, 101, 3  (nrow, ncol, nlyr)
 # resolution  : 1, 1  (x, y)
@@ -21,3 +28,4 @@ logo
 ## i niebieskiego
 ## zakres przestrzenny zdefiniowany jest przez liczbę wierszy (oś Y) i liczbę
 ## kolumn (oś X)
+
